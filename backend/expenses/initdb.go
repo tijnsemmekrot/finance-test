@@ -1,4 +1,4 @@
-package expense
+package expenses
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func insertExpense(w http.ResponseWriter, r *http.Request) {
+func InsertExpense(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "POST" {
 		http.Error(w, "Only POST allowed", http.StatusMethodNotAllowed)
 		return
